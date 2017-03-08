@@ -10,12 +10,15 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 	
 	static WebDriver driver;
 	
-	public static WebDriver startBrowser(String browserType, String Url)
+	public static WebDriver startBrowser(String browserType,String url)
 	{
 		
 		if(browserType.equalsIgnoreCase("firefox"))
 		{
 			   System.setProperty("webdriver.firefox.marionette","D:/16D/geckodriver-v0.14.0-win64/geckodriver.exe");
+			  //final FirefoxProfile firefoxProfile = new FirefoxProfile();
+ 
+			   //firefoxProfile.setPreference("xpinstall.signatures.required", false);
 
 				driver =new FirefoxDriver();
 		
@@ -37,7 +40,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 		}
 		
 	driver.manage().window().maximize();
-	driver.get("url");
+	driver.get("http://demosite.center/wordpress/wp-login.php");
 	return driver;
 	}
 }

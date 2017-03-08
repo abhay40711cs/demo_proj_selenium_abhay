@@ -15,7 +15,8 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 		
 		if(browserType.equalsIgnoreCase("firefox"))
 		{
-				
+			   System.setProperty("webdriver.firefox.marionette","D:/16D/geckodriver-v0.14.0-win64/geckodriver.exe");
+
 				driver =new FirefoxDriver();
 		
 		
@@ -23,9 +24,9 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 		
 		if(browserType.equalsIgnoreCase("crome"))
 		{
-				
+			System. setProperty("webdriver.chrome.driver", "D:/16D/chromedriver_win32/chromedriver.exe");
+
 				driver =new ChromeDriver();
-				System. setProperty("webdriver.chrome.driver", "D:/16D/chromedriver_win32/chromedriver.exe");
 		}
 		
 		if(browserType.equalsIgnoreCase("IE"))
